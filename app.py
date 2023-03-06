@@ -25,11 +25,11 @@ def result():
     x = np.array([[item_weight,item_fat_content,item_visibility,item_type,item_mrp,outlet_establishment_year,
                    outlet_size,outlet_location_type,outlet_type]])
 
-    scaler_path = r'C:\Users\Soumyajit\OneDrive\Desktop\sales_prediction\models\sc.sav'
+    scaler_path = r'https://github.com/Soumyajit-Paramanick/sales_prediction_ml_model/tree/main/sales_prediction%20_ml_model/models\sc.sav'
     sc = joblib.load(scaler_path)
     x_std=sc.transform(x)
 
-    model_path = r'C:\Users\Soumyajit\OneDrive\Desktop\sales_prediction\models\lr.sav'
+    model_path = r'https://github.com/Soumyajit-Paramanick/sales_prediction_ml_model/tree/main/sales_prediction%20_ml_model/models\lr.sav'
     model = joblib.load(model_path)
     y_pred = model.predict(x_std)
 
